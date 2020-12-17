@@ -1,100 +1,246 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.admin')
+@section('content')
 
-        <title>Laravel</title>
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <div id="crypto-stats-3" class="row">
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc BTC warning font-large-2" title="BTC"></i></h1>
+                                        </div>
+                                        <div class="col-5 pl-2">
+                                            <h4>اجمالي المبيعات</h4>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h4>$9,980</h4>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="btc-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc ETH blue-grey lighten-1 font-large-2" title="ETH"></i></h1>
+                                        </div>
+                                        <div class="col-5 pl-2">
+                                            <h4>اجمالي الطلبات</h4>
 
-            .full-height {
-                height: 100vh;
-            }
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h4>944</h4>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="eth-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
+                                        </div>
+                                        <div class="col-5 pl-2">
+                                            <h4>عدد المنتجات</h4>
 
-            .position-ref {
-                position: relative;
-            }
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h4>200</h4>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="xrp-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <div class="card crypto-card-3 pull-up">
+                            <div class="card-content">
+                                <div class="card-body pb-0">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <h1><i class="cc XRP info font-large-2" title="XRP"></i></h1>
+                                        </div>
+                                        <div class="col-5 pl-2">
+                                            <h4>عدد العملاء</h4>
 
-            .content {
-                text-align: center;
-            }
+                                        </div>
+                                        <div class="col-5 text-right">
+                                            <h4>2000</h4>
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <canvas id="xrp-chartjs" class="height-75"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            @endif
+                <!-- Candlestick Multi Level Control Chart -->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <!-- Sell Orders & Buy Order -->
+                <div class="row match-height">
+                    <div class="col-12 col-xl-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">احدث الطلبات</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-de mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>رقم الطلب</th>
+                                            <th>العميل</th>
+                                            <th>السعر</th>
+                                            <th>حاله الطلب</th>
+                                            <th>الاجمالي</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="bg-success bg-lighten-5">
+                                            <td>1</td>
+                                            <td><i class="cc BTC-alt"></i> زياد عبد الفتاح</td>
+                                            <td>$ 4762.53</td>
+                                            <td>مكتمل</td>
+                                            <td>$ 4762.53</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">اخر التقيمات</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-de mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>العميل </th>
+                                            <th>المنتج</th>
+                                            <th>التقييم</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="bg-danger bg-lighten-5">
+                                            <td>زياد عبد الفتاح</td>
+                                            <td><i class="cc BTC-alt"></i> ساعه يد</td>
+                                            <td>5</td>
+                                        </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--/ Sell Orders & Buy Order -->
+                <!-- Active Orders -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Active Order</h4>
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <td>
+                                        <button class="btn btn-sm round btn-danger btn-glow"><i class="la la-close font-medium-1"></i> Cancel all</button>
+                                    </td>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-de mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Type</th>
+                                            <th>Amount BTC</th>
+                                            <th>BTC Remaining</th>
+                                            <th>Price</th>
+                                            <th>USD</th>
+                                            <th>Fee (%)</th>
+                                            <th>Cancel</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>2018-01-31 06:51:51</td>
+                                            <td class="success">Buy</td>
+                                            <td><i class="cc BTC-alt"></i> 0.58647</td>
+                                            <td><i class="cc BTC-alt"></i> 0.58647</td>
+                                            <td>11900.12</td>
+                                            <td>$ 6979.78</td>
+                                            <td>0.2</td>
+                                            <td>
+                                                <button class="btn btn-sm round btn-outline-danger"> Cancel</button>
+                                            </td>
+                                        </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Active Orders -->
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+
+@stop
