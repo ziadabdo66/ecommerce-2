@@ -8,5 +8,5 @@ class SettingTranslation extends Model
 {
     protected $table='setting_translations';
     protected $guarded=[];
-  // public $timestamps = false;
+   public $timestamps = false;
 }
