@@ -24,10 +24,10 @@ class settingDatabaseSeeder extends Seeder
    'local_pickup_cost'=>0,
    'flat_rate_cost'=>0,
   'translatable'=>[
-       'store_name'=>'FleetStore',
-       'free_shipping_label'=>'Free shipping',
-       'local_label'=>'Local shipping',
-       'Outer_label'=>'Outer shipping',
+       'store_name'=>'متجر زيزو',
+       'free_shipping_label'=>'توصيل داخلي',
+       'local_label'=>'توصيل داخلي',
+       'Outer_label'=>'توصيل خارجي',
    ]
 
 
