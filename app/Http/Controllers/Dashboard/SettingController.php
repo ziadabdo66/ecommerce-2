@@ -35,7 +35,7 @@ else{
 
        $shipping_method= Setting::find($updateSettingId);
        $shipping_method->update(['plan_value'=>$request->plan_value]);
-       $shipping_method->translate('ar')->value=$request->value;
+       $shipping_method->value=$request->value;
        $shipping_method->save();
        DB::commit();
         return redirect()->back()->with(['success' => 'تم التعديل بنجاح']);
