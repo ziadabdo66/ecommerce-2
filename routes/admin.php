@@ -31,6 +31,22 @@ Route::group(
             Route::put('shipping-methods\{id}', 'SettingController@updateShippingMethods')->name('updateShippingMethod');;
 
         });
+        ##################Categoris###################
+        Route::group(['prefix' => 'MainCategories'], function () {
+            Route::get('/{type}', 'MainCategoriesController@index')->name('admin.mainCategories');
+            Route::get('/create/{type}', 'MainCategoriesController@create')->name('admin.mainCategories.create');
+            Route::post('/store', 'MainCategoriesController@store')->name('admin.mainCategories.store');
+            Route::get('/edit/{id}', 'MainCategoriesController@edit')->name('admin.mainCategories.edit');
+            Route::post('/update/{id}', 'MainCategoriesController@update')->name('admin.mainCategories.update');
+            Route::get('/delete/{id}', 'MainCategoriesController@delete')->name('admin.mainCategories.delete');
+            ####################edit and delete and update subcategory
+            Route::get('/editSub/{id}', 'MainCategoriesController@editSub')->name('admin.subCategories.edit');
+            Route::post('/updateSub/{id}', 'MainCategoriesController@updateSub')->name('admin.subCategories.update');
+            Route::get('/deleteSub/{id}', 'MainCategoriesController@deleteSub')->name('admin.subCategories.delete');
+
+
+        });
+        #####################end categories##############
     });
 
     Route::group(['namespace' => 'Dashboard', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
