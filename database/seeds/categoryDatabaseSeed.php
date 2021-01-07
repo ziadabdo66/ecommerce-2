@@ -11,6 +11,14 @@ class categoryDatabaseSeed extends Seeder
      */
     public function run()
     {
-       factory(\App\models\Category::class,20)->create();
+       factory(\App\models\Category::class,20)->create([
+           'parent_id'=>$this->getRandomParentId(),
+       ]);
+
+    }
+
+    private function getRandomParentId()
+    {
+        return \App\models\Category::inRandomOrder()->first();
     }
 }

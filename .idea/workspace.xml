@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="912f653f-26e4-4878-adb7-11251b777093" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Adminprofile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Adminprofile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/interfaces/RepositresInterfaces.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositres/Repositry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/CategoryTranslation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_004721_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_004733_create_categories_translations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/categoryDatabaseSeed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/auth/editprofile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/'required'" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/mainCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/mainsCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/subCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/createsubcategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/editsubcategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper/generalHelp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/generalHelp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/categoryDatabaseSeed.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/categoryDatabaseSeed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/subCategory" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -178,13 +178,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\subCategory" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\categories" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\auth" />
       <recent name="C:\wamp64\www\ecommerce\resources\lang\en\admin" />
       <recent name="C:\wamp64\www\ecommerce\resources\lang\ar\admin" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\en" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\ar\admin\sidebar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\categories" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\subCategory" />
       <recent name="C:\wamp64\www\ecommerce\app\models" />
     </key>
   </component>
@@ -239,6 +241,11 @@
       <workItem from="1608799603024" duration="4740000" />
       <workItem from="1609691627248" duration="2828000" />
       <workItem from="1609716926526" duration="4373000" />
+      <workItem from="1609803531109" duration="2995000" />
+      <workItem from="1609869309860" duration="7590000" />
+      <workItem from="1609952852542" duration="19793000" />
+      <workItem from="1610059657684" duration="890000" />
+      <workItem from="1610061420588" duration="835000" />
     </task>
     <servers />
   </component>
