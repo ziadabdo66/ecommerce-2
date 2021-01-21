@@ -25,4 +25,17 @@ class Category extends Model
     public function _parent(){
         return $this->belongsTo(self::class,'parent_id');
     }
+
+    public function sub_category(){
+        return $chiled=$this->hasMany(self::class,'parent_id');
+
+
+
+    }
+    public function cat_trans(){
+        return $this->hasMany(CategoryTranslation::class,'category_id');
+    }
+
+
+
 }
