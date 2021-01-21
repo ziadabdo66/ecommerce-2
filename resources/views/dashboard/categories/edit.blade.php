@@ -106,6 +106,40 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                @if($mainCategory ->parent_id!==null)
+                                                <div class="row" >
+                                                    <div class="col-md-12" >
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">اختر القسم
+                                                            </label>
+                                                            <select type="text" id="name"
+                                                                    class="select2 form-control"
+                                                                    name="parent_id">
+                                                                <optgroup label="من فضلك اختر القسم">
+
+                                                                        @if($categories && $categories->count()>0)
+                                                                            @foreach($categories as $category)
+                                                                                <option value="{{$category->id}}" @if($category->id==$mainCategory->parent_id) selected @endif style="font-size: large">{{$category->_parent->name ?? ''}}
+                                                                                    -<li>  {{$category->name}}</li></option>
+
+
+
+
+                                                                            @endforeach
+                                                                        @endif
+
+
+
+
+                                                                </optgroup>
+                                                                @error("parent_id")
+                                                                <span class="text-danger">{{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endif
+
 
 
 

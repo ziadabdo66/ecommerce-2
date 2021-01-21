@@ -2,20 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="912f653f-26e4-4878-adb7-11251b777093" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/'required'" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/mainCategoryRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/mainsCategoryRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/subCategoryRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/createsubcategory.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/editsubcategory.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrandController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/BrandRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/TagRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Brand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/BrandTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/TagTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_143058_create_brands_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_143150_create_brand_translations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_144140_add_photo_colum_to_brands_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_145851_create_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_145930_create_tag_transaltions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/2yrK1cDtB4dNu3HNItWca1femfaUyyYNmKIXfBcA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/QzwBBk6gnVFmhMAotTX3RLb7MlW8tkATpow2rPws.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/V08ZmrtM5lkthBbFtThvHVy8YmU7iRv2GuvsHCk6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/Ve9I4k7jtqJs3RWBh2QfuRbxHd2Ct4A1jVR0MoHE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/gKaFAcfA6zLDuFCW06T3ABK6P8OglHg2NGU9sD8z.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/brands/zVS3QUKiqPBm2Pk3nLFWEkxtKcbrSDTquYuSVkhn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helper/generalHelp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/generalHelp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/mainCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/mainCategoryRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/categoryDatabaseSeed.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/categoryDatabaseSeed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/createsubcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/editsubcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -166,7 +186,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/subCategory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/tags" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -178,11 +198,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\tags" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\brands" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\subCategory" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\categories" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\auth" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\en\admin" />
-      <recent name="C:\wamp64\www\ecommerce\resources\lang\ar\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ecommerce\resources\views\dashboard\categories" />
@@ -245,7 +265,50 @@
       <workItem from="1609869309860" duration="7590000" />
       <workItem from="1609952852542" duration="19793000" />
       <workItem from="1610059657684" duration="890000" />
-      <workItem from="1610061420588" duration="835000" />
+      <workItem from="1610061420588" duration="1778000" />
+      <workItem from="1610063594161" duration="824000" />
+      <workItem from="1610202446489" duration="1728000" />
+      <workItem from="1610204246113" duration="1778000" />
+      <workItem from="1610206073516" duration="1468000" />
+      <workItem from="1610208983928" duration="1389000" />
+      <workItem from="1610212092891" duration="765000" />
+      <workItem from="1610333745222" duration="1550000" />
+      <workItem from="1610335411252" duration="1787000" />
+      <workItem from="1610337221935" duration="1795000" />
+      <workItem from="1610339046113" duration="1781000" />
+      <workItem from="1610340882903" duration="448000" />
+      <workItem from="1610411493158" duration="1748000" />
+      <workItem from="1610413287351" duration="818000" />
+      <workItem from="1610415367063" duration="1866000" />
+      <workItem from="1610417307798" duration="1020000" />
+      <workItem from="1610422878240" duration="1817000" />
+      <workItem from="1610424726141" duration="1791000" />
+      <workItem from="1610426553875" duration="1790000" />
+      <workItem from="1610428361077" duration="1794000" />
+      <workItem from="1610430173668" duration="485000" />
+      <workItem from="1610549021218" duration="1683000" />
+      <workItem from="1610550913455" duration="1714000" />
+      <workItem from="1610552844672" duration="1591000" />
+      <workItem from="1610554631286" duration="1199000" />
+      <workItem from="1610571886955" duration="1687000" />
+      <workItem from="1610573686937" duration="1786000" />
+      <workItem from="1610575496332" duration="1797000" />
+      <workItem from="1610577328287" duration="1789000" />
+      <workItem from="1610579137375" duration="1791000" />
+      <workItem from="1610581037073" duration="1347000" />
+      <workItem from="1610987883895" duration="1767000" />
+      <workItem from="1610989682134" duration="1434000" />
+      <workItem from="1610991510451" duration="1852000" />
+      <workItem from="1610993401359" duration="1785000" />
+      <workItem from="1610995231169" duration="1806000" />
+      <workItem from="1610997068901" duration="8000" />
+      <workItem from="1611258223134" duration="1776000" />
+      <workItem from="1611260031047" duration="1792000" />
+      <workItem from="1611261843736" duration="1103000" />
+      <workItem from="1611263731533" duration="1779000" />
+      <workItem from="1611265575879" duration="2300000" />
+      <workItem from="1611267918166" duration="1790000" />
+      <workItem from="1611269728220" duration="847000" />
     </task>
     <servers />
   </component>
