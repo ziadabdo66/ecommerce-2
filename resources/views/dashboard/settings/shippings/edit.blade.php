@@ -75,7 +75,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput2"> قيمه التوصيل </label>
-                                                            <input type="number" name="plan_value"  class="form-control" value="{{$shippingMethod->value}}" >
+                                                            <input type="number" name="plan_value"  class="form-control" value="{{$shippingMethod->plan_value}}" >
 
                                                             @error('plan_value')
                                                             <span class="text-danger"> {{$message}}</span>

@@ -151,7 +151,7 @@
                                                             <label for="projectinput1">
                                                             </label>
 
-                                                            <select  style="width: 60%" type="text" id="parent_id">
+                                                            <select  style="width: 60%" type="text" id="parent_id"
                                                                     class="select2 form-control"
                                                                     name="parent_id">
                                                                 <optgroup label="من فضلك اختر القسم">

@@ -19,4 +19,7 @@ class Brand extends Model
     public function getPhotoAttribute($value){
         return ($value!==null)?asset('assets/images/brands/'.$value):"";
     }
+    public function scopeActive($query){
+        return    $query->where('is_active',1);
+    }
 }
