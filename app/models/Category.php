@@ -19,6 +19,9 @@ class Category extends Model
     public function scopeChild($query){
         return    $query->whereNotNull('parent_id');
     }
+    public function scopeActive($query){
+        return    $query->where('is_active',1);
+    }
     public function getactive(){
        return $this-> is_active==0?"غير مفعل":"مفعل";
     }

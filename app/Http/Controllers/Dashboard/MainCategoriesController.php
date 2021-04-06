@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Enumuration\categoriesType;
 use App\Http\Requests\mainCategoryRequest;
 use App\Http\Requests\mainsCategoryRequest;
 use App\Http\Requests\subCategoryRequest;
@@ -46,7 +47,7 @@ class MainCategoriesController extends Controller
                     $request->request->add(['is_active' => 1]);
                 }
                 #####That main he will go to sub category
-                if($request->typeradio==2){
+                if($request->typeradio==categoriesType::subcategory){
                     $category = Category::create($request->except('_token'));
                     $category->name = $request->name;
                     $category->save();
@@ -110,6 +111,7 @@ class MainCategoriesController extends Controller
 
 
         $mainCategory->cat_trans()->delete();
+
        $mainCategory->sub_category()->delete();
         $mainCategory->delete();
 

@@ -16,12 +16,12 @@ if($type==='free'){
     $shippingMethod= Setting::where('key','free_shipping_label')->first();
 }
 else if($type==='inner'){
-    return Setting::where('key','local_label')->first();
+    $shippingMethod= Setting::where('key','local_label')->first();
 }
 else if($type==='external'){
     $shippingMethod= Setting::where('key','Outer_label')->first();
 }
-else{
+ else {
     $shippingMethod= Setting::where('key','free_shipping_label')->first();
 }
         return view('dashboard.settings.shippings.edit',compact('shippingMethod'));
